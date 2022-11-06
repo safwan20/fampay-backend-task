@@ -1,0 +1,24 @@
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRED_HOST: postgres
+      POSTGRES_DATABASE: postgres
+      POSTGRES_TABLE: youtube_videos
+      INDEX_NAME: publishedate_index
+    ports: 
+      - '5432:5432'
+
+  web:
+    build: .
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRED_HOST: postgres
+      POSTGRES_DATABASE: postgres
+      PORT: 5432
+      API_KEY: AIzaSyCXCnmebGO7seiRolFnAhEPUT6u_PTIpcQ
+    depends_on:
+      - postgres

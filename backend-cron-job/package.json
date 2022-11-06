@@ -1,0 +1,19 @@
+{
+  "name": "backend-cron-job",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "i": "^0.3.7",
+    "moment": "^2.29.4",
+    "npm": "^8.19.3",
+    "pg": "^8.8.0",
+    "phin": "^3.6.1"
+  }
+}

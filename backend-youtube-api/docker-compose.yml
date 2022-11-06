@@ -1,0 +1,12 @@
+services:
+  web-api:
+    build: .
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_HOST: host.docker.internal
+      POSTGRES_DATABASE: postgres
+      PORT: 5432
+      NODE_PORT: 3000
+    ports:
+      - "3000:3000"
